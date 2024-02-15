@@ -14,7 +14,7 @@
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
     console.log(tz);
     Telegram.WebApp.MainButton.setText('Set timezone: ' + tz).show().onClick(function () {
-        const data = JSON.stringify({msg: tz});
+        const data = JSON.stringify({"tz": tz});
         Telegram.WebApp.sendData(data);
         Telegram.WebApp.close();
      });
