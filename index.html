@@ -11,7 +11,6 @@
 <script>
   Telegram.WebApp.ready();
 
-  function myFunction(e){
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
     console.log(tz);
     Telegram.WebApp.MainButton.setText('Set timezone: ' + tz).show().onClick(function () {
@@ -19,7 +18,7 @@
         Telegram.WebApp.sendData(data);
         Telegram.WebApp.close();
      });
-  }
+
 </script>
 <body>
 
